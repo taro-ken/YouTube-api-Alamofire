@@ -1,0 +1,2 @@
+# YouTube-api-Alamofire
+YouTube風のアプリをalamofireを用いてAPI通信するサンプル
