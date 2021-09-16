@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4tJ-UZ-nfj" customClass="VideoListCell" customModule="YouTube_api_Alamofire" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="395" height="375"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="trP-s3-MOA">
+                <rect key="frame" x="0.0" y="0.0" width="395" height="375"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YIu-Dw-Mvc">
+                        <rect key="frame" x="0.0" y="15" width="395" height="280"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="280" id="Gz7-bD-OXx"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VZC-Ai-0L5">
+                        <rect key="frame" x="10" y="305" width="40" height="40"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="VZC-Ai-0L5" secondAttribute="height" multiplier="1:1" id="1Xd-le-r24"/>
+                            <constraint firstAttribute="width" constant="40" id="Bn8-ve-Fbq"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FtF-Fp-hxq">
+                        <rect key="frame" x="60" y="305" width="325" height="35"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNF-K5-0MM">
+                                <rect key="frame" x="0.0" y="0.0" width="325" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGf-kb-E9b">
+                                <rect key="frame" x="0.0" y="18" width="325" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VZC-Ai-0L5" firstAttribute="leading" secondItem="trP-s3-MOA" secondAttribute="leading" constant="10" id="2FU-Yb-VFg"/>
+                    <constraint firstItem="FtF-Fp-hxq" firstAttribute="leading" secondItem="VZC-Ai-0L5" secondAttribute="trailing" constant="10" id="EmH-ZO-Cla"/>
+                    <constraint firstAttribute="trailing" secondItem="FtF-Fp-hxq" secondAttribute="trailing" constant="10" id="M2d-xn-1g3"/>
+                    <constraint firstItem="YIu-Dw-Mvc" firstAttribute="leading" secondItem="trP-s3-MOA" secondAttribute="leading" id="dkA-QU-b2e"/>
+                    <constraint firstAttribute="trailing" secondItem="YIu-Dw-Mvc" secondAttribute="trailing" id="drt-eN-p22"/>
+                    <constraint firstItem="YIu-Dw-Mvc" firstAttribute="top" secondItem="trP-s3-MOA" secondAttribute="top" constant="15" id="iFZ-05-zxZ"/>
+                    <constraint firstItem="FtF-Fp-hxq" firstAttribute="top" secondItem="YIu-Dw-Mvc" secondAttribute="bottom" constant="10" id="jqP-Pw-3Ff"/>
+                    <constraint firstItem="VZC-Ai-0L5" firstAttribute="top" secondItem="YIu-Dw-Mvc" secondAttribute="bottom" constant="10" id="qNq-iq-xnV"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="395" height="375"/>
+            <connections>
+                <outlet property="channelImageView" destination="VZC-Ai-0L5" id="k6n-yh-Z5K"/>
+                <outlet property="descriptionLabel" destination="fGf-kb-E9b" id="jhw-hP-uhV"/>
+                <outlet property="thumbnailImageView" destination="YIu-Dw-Mvc" id="o19-rf-j4c"/>
+                <outlet property="titleLabel" destination="sNF-K5-0MM" id="wK3-0S-eWe"/>
+            </connections>
+            <point key="canvasLocation" x="171.73913043478262" y="18.415178571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
